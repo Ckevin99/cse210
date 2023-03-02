@@ -21,7 +21,7 @@ static int SquareNumber( int a){
 }
 static void DisplayResult(string name, int number){
     Console.WriteLine($"Your name is: {name}");
-    Console.WriteLine($"Your favorite number is: {number}");
+    Console.WriteLine($"The square of your number is: {number}");
 }
 
 
@@ -31,7 +31,7 @@ static void Main(string[] args) {
 DisplayWelcome();
 string name = PromptUserName();
 int favnum = PromptUserNumber();
-int squarenum = SquareNumber(3);
-DisplayResult(name, favnum);
+int squarenum = SquareNumber(favnum);
+DisplayResult(name, squarenum);
 }
 }
