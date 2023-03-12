@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-/*Shows creativity and exceeds core requirements - I created a variable saved that will be checked if it is true 
+/*Shows creativity and exceeds core requirements - I created a variable called "saved" that will be checked if it is true 
 and the program will ask the users if they are sure to quit without saving, if yes the program will quit, if not they 
 will back to the main menu, each time the user write and try to quit it will be prompt. */
 
