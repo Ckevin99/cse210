@@ -38,10 +38,8 @@ public class Program
                     break;
                
                 case "2":
-                    foreach (string x in journal._answers)
-                    {
-                        Console.WriteLine(x);
-                    } 
+                    journal.DisplayEntries(journal._answers);
+                   
                     break;
             
                 case "3":

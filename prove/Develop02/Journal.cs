@@ -29,6 +29,14 @@ public class Journal{
     
 
     }
+    public void DisplayEntries(List<string> entries)
+    {
+        foreach (string entry in entries)
+        {
+            Console.WriteLine(entry);
+        } 
+
+    }
 
     
 
