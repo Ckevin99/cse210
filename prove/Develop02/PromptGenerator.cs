@@ -12,7 +12,8 @@ public class PromptGenerator
             Console.WriteLine(_prompts[prompt]);
     }
     
-    public void LoadPrompts(List<string> addPrompts){
+    public void LoadPrompts(List<string> addPrompts)
+    {
         string[] loadPrompts = System.IO.File.ReadAllLines("prompts.txt");
         foreach( string loadPrompt in loadPrompts)
         {
@@ -21,6 +22,6 @@ public class PromptGenerator
 
 
         
-     }  
+    }  
     
 }
