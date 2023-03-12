@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
 
-/*Shows creativity and exceeds core requirements - I created a variable called "saved" that will be checked if it is true 
-and the program will ask the users if they are sure to quit without saving, if yes the program will quit, if not they 
-will back to the main menu, each time the user write and try to quit it will be prompt. */
+/*Shows creativity and exceeds core requirements 
+- I created a variable called "saved" that will be checked if it is true, if it is false, 
+the program will ask the users if he is sure that he want to quit without saving, 
+if yes the program will quit, if not, he will back to the main menu. 
+each time the user write and try to quit it will be prompt.(load and display will not trigger it) */
+
 
 public class Program
 {
