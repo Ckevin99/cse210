@@ -7,26 +7,32 @@ public class HelloWorld
     public static void Main(string[] args)
     {
         string userinput;
-        Scripture scripture = new Scripture();
-        scripture.SetText();
-        scripture.SeparetedText();
+        GetScripture getscripture = new GetScripture();
+        getscripture.LoadsScriptures();
+        string[] scripturereference = getscripture.SelectReference();
+        Reference reference = new Reference(scripturereference[0],scripturereference[1],scripturereference[2]);
+        string scripreference = reference.GetFormated();
+
+        Scripture scripture = new Scripture(getscripture.SelectScripture(), scripreference);
+
+        
+        
         do{
-        scripture.Display();
-        userinput = Console.ReadLine();
-        scripture.Hide();
-        Console.Clear();
+            scripture.Display();
+            scripture.Hide();
+            userinput = scripture.IsCompletely();
+            if (userinput=="no"){
+                userinput = Console.ReadLine();
+            }
+ 
+
+
+            
+            
         
         
       
         }while(userinput != "quit");
     }
     
-    
-    public class ScriptureGenerate {
-        // private  _scriptures store in a list
-        
-         //_private loadfile ( load a list of scriptures)
-         
-         //_public string  GeneateScripture (get a scripture from the list)
-    }
 }

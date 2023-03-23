@@ -1,11 +1,37 @@
 using System;
 
 public class Word {
-       // private list<string> words = new list<string>();
+      private string _word;
+      private string _wordhided;
+      private bool _ishide;
         
-        public string GetWords(){
+        public Word(string x){
             
-            return "Minha escritura é essa.";
+            _word = x;
+            _ishide = false;
+        }
+
+        public void hide(){
+
+            char[] charWord = _word.ToCharArray();
+            _ishide = true;
+
+            for (int i = 0; i < charWord.Length; i++) {
+                charWord[i] = '_';
+      }
+            _wordhided = new string (charWord);
+          
+
+        }
+        public string GetWord(){
+            if (_ishide){
+                return _wordhided;
+            }else{
+                return _word;
+            }
+        }
+        public bool ishided(){
+           return _ishide;
         }
         
     }
