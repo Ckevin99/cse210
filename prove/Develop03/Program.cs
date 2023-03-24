@@ -6,8 +6,8 @@ using System.Linq;
 //*Have your program work with a library of scriptures rather than a single one. Choose scriptures at random to present to the user.
 //*Have the program to load scriptures from files.
 
-// My Program have a GetScripture Class, It will load a file with a list of different scriptures(single and multiple verses) and select randomly one.
-// Strect Challenge - My Program will hide only Words that were not hidden yet.
+// My Program has a GetScripture Class, It will load a file with a list of different scriptures(single and multiple verses) and select randomly one.
+// Stretch Challenge - My Program will hide only Words that were not hidden yet.
 
 
 
