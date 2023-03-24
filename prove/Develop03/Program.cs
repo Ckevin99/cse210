@@ -6,23 +6,31 @@ public class HelloWorld
 {
     public static void Main(string[] args)
     {
-        string userinput;
+         string userinput;
+
         GetScripture getscripture = new GetScripture();
+
         getscripture.LoadsScriptures();
+
         string[] scripturereference = getscripture.SelectReference();
-        Reference reference = new Reference(scripturereference[0],scripturereference[1],scripturereference[2]);
+    
+        Reference reference = new Reference(scripturereference);
+
         string scripreference = reference.GetFormated();
 
         Scripture scripture = new Scripture(getscripture.SelectScripture(), scripreference);
 
         
-        
         do{
             scripture.Display();
-            scripture.Hide();
+            
             userinput = scripture.IsCompletely();
+            scripture.Hide();
+
+            Console.WriteLine("\n\nPress enter to continue or Type 'quit' to finish");
             if (userinput=="no"){
                 userinput = Console.ReadLine();
+                Console.Clear();
             }
  
 

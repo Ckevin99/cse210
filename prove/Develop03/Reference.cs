@@ -1,37 +1,43 @@
 using System;
 
-public class Reference{
-        private string _formated;
-        private string _verse;
-        private string _chapter;
-        private string _book;
-        private string _lastverse;
+public class Reference
+{
+          private string _formated;
+          private string _verse;
+          private string _chapter;
+          private string _book;
+          private string _lastverse;
+          private bool _multipleVerse;
 
-        public Reference(string book, string chapter, string verse){
-
-             _verse = verse;
-             _chapter = chapter;
-             _book = book;
-     
-            
-            
-        }
-        public Reference(string book, string chapter, string verse, string lastverse){
+ 
+          public Reference(string[] reference)
+          {
            
-             _verse = verse;
-             _chapter = chapter;
-             _book = book;
-             _lastverse = lastverse;
-            
-            
-        }
-        
-        
-        public string GetFormated(){
+               _verse = reference[2];
+               _chapter = reference[1];
+               _book = reference[0];
 
-            _formated = $"{_book} {_chapter}:{_verse}";
+               _multipleVerse = false;
+
+              if (reference.Count()==4)
+              {
+                   _lastverse = reference[3];
+                   _multipleVerse = true;
+              }
             
-            return _formated;
-        }
+          }
         
-    }
+        
+          public string GetFormated()
+          {
+               if (_multipleVerse)
+               {
+                    _formated = $"{_book} {_chapter}:{_verse}-{_lastverse}";
+               } else if (!_multipleVerse)
+               {
+                    _formated = $"{_book} {_chapter}:{_verse}";
+               }
+                    return _formated;
+          }
+        
+}
