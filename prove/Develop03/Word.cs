@@ -2,36 +2,36 @@ using System;
 
 public class Word {
       private string _word;
-      private string _wordhided;
-      private bool _ishide;
+      private string _wordHided;
+      private bool _isHide;
         
         public Word(string x){
             
             _word = x;
-            _ishide = false;
+            _isHide = false;
         }
 
-        public void hide(){
+        public void Hide(){
 
             char[] charWord = _word.ToCharArray();
-            _ishide = true;
+            _isHide = true;
 
             for (int i = 0; i < charWord.Length; i++) {
                 charWord[i] = '_';
       }
-            _wordhided = new string (charWord);
+            _wordHided = new string (charWord);
           
 
         }
         public string GetWord(){
-            if (_ishide){
-                return _wordhided;
+            if (_isHide){
+                return _wordHided;
             }else{
                 return _word;
             }
         }
-        public bool ishided(){
-           return _ishide;
+        public bool IsHided(){
+           return _isHide;
         }
         
     }

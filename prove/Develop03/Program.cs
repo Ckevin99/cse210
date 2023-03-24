@@ -2,13 +2,22 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+// Exceeds core requirements.
+//*Have your program work with a library of scriptures rather than a single one. Choose scriptures at random to present to the user.
+//*Have the program to load scriptures from files.
+
+// My Program have a GetScripture Class, It will load a file with a list of different scriptures(single and multiple verses) and select randomly one.
+// Strect Challenge - My Program will hide only Words that were not hidden yet.
+
+
+
 public class HelloWorld
 {
     public static void Main(string[] args)
     {
          string userinput;
 
-        GetScripture getscripture = new GetScripture();
+        GetScripture getscripture = new GetScripture("scriptures.txt");
 
         getscripture.LoadsScriptures();
 
@@ -16,9 +25,7 @@ public class HelloWorld
     
         Reference reference = new Reference(scripturereference);
 
-        string scripreference = reference.GetFormated();
-
-        Scripture scripture = new Scripture(getscripture.SelectScripture(), scripreference);
+        Scripture scripture = new Scripture(getscripture.SelectScripture(), reference.GetFormated());
 
         
         do{

@@ -6,7 +6,7 @@ public class Reference
           private string _verse;
           private string _chapter;
           private string _book;
-          private string _lastverse;
+          private string _lastVerse;
           private bool _multipleVerse;
 
  
@@ -21,7 +21,7 @@ public class Reference
 
               if (reference.Count()==4)
               {
-                   _lastverse = reference[3];
+                   _lastVerse = reference[3];
                    _multipleVerse = true;
               }
             
@@ -32,7 +32,7 @@ public class Reference
           {
                if (_multipleVerse)
                {
-                    _formated = $"{_book} {_chapter}:{_verse}-{_lastverse}";
+                    _formated = $"{_book} {_chapter}:{_verse}-{_lastVerse}";
                } else if (!_multipleVerse)
                {
                     _formated = $"{_book} {_chapter}:{_verse}";

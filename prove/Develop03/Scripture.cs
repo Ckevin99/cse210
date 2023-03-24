@@ -1,7 +1,7 @@
 public class Scripture
 {
     private List<string> _words = new List<string>();
-    private List<Word> _wordso = new List<Word>();
+    private List<Word> _wordsObject = new List<Word>();
     private List<int> _hided = new List<int>();
     private string references;
      
@@ -9,7 +9,7 @@ public class Scripture
     public void Display()
     {
         Console.Write($"{references} ");
-        foreach(Word x in _wordso)
+        foreach(Word x in _wordsObject)
         {
             Console.Write(x.GetWord()+" ");
         }
@@ -23,7 +23,7 @@ public class Scripture
         foreach (string x in _words)
         {
             Word word = new Word(x);
-            _wordso.Add(word);
+            _wordsObject.Add(word);
         }
  
          
@@ -31,9 +31,9 @@ public class Scripture
 
     public string IsCompletely()
     {
-       foreach (Word x in _wordso)
+       foreach (Word x in _wordsObject)
        {
-            if (!x.ishided())
+            if (!x.IsHided())
             {
                 return "no";
             }
@@ -58,8 +58,8 @@ public class Scripture
             do
             {
 
-                erased  = rand.Next(0, _wordso.Count);
-                if (_hided.Count > _wordso.Count-1)
+                erased  = rand.Next(0, _wordsObject.Count);
+                if (_hided.Count > _wordsObject.Count-1)
                 {
                     finish= true;
    
@@ -77,7 +77,7 @@ public class Scripture
             }while(!finish);
 
             _hided.Add(erased);
-            _wordso[erased].hide();
+            _wordsObject[erased].Hide();
             times++;
         }while(3>times);
         
