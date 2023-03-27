@@ -15,6 +15,8 @@ public class ReflectionActivity : Activity{
         WaitAnimation(4);
         GetrandomPrompt();
         DisplayPromts();
+        Console.ReadLine();
+        Console.WriteLine("Now ponder on each the following questions as they are related to this experience.");
 
 
     }
