@@ -8,23 +8,26 @@ class Program
     {
         string userinput;
         do{
-        Console.WriteLine("Menu Options:");
-        Console.WriteLine("1. Start Breathing Activity\n2. Start Reflecting Activity\n3. Start listing Activity\n4. Quit");
-        Console.WriteLine("Select a choice from the menu:");
-        userinput = Console.ReadLine();
-        BreathingActivity breathingactivity = new BreathingActivity("Description Relaxing activity", "Breathing Activity");
+            Console.WriteLine("Menu Options:");
+            Console.WriteLine("1. Start Breathing Activity\n2. Start Reflecting Activity\n3. Start listing Activity\n4. Quit");
+            Console.WriteLine("Select a choice from the menu:");
+            userinput = Console.ReadLine();
 
         switch(userinput){
 
         case "1": 
-        breathingactivity.TimeSession();
-        breathingactivity.DisplayStartMessage();
-        breathingactivity.Breathing();
+            BreathingActivity breathingactivity = new BreathingActivity();
+            breathingactivity.DisplayStartMessage();
+            breathingactivity.TimeSession();
+            breathingactivity.Breathing();
 
 
         break;
         case "2":
-
+            ReflectionActivity reflectionactivity = new ReflectionActivity();
+            reflectionactivity.DisplayStartMessage();
+            reflectionactivity.TimeSession();
+            reflectionactivity.Reflection();
         break;
         case "3":
 
@@ -34,7 +37,7 @@ class Program
         break;
 
         default:
-        Console.WriteLine("\nPlease, Type a number in the menu\n");
+            Console.WriteLine("\nPlease, Type a number in the menu\n");
 
         break;
 

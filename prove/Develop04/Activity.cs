@@ -9,6 +9,10 @@ public class Activity{
 
 
 
+    
+
+
+
 
 
     public void TimeSession(){
@@ -24,10 +28,11 @@ public class Activity{
 
     }
     public void DisplayEndMessage(){
+        Console.Clear();
         Console.WriteLine("Well Done!");
         WaitAnimation(5);
 
-        Console.WriteLine($"You have completed another {_duration} seconds of the {_activityname}.");
+        Console.WriteLine($"You have completed another {_duration} seconds of the {_activityname}.\n");
         
     }
     public void WaitAnimation(int numSecondsToRun){
@@ -57,7 +62,7 @@ public class Activity{
 
         for (int i = numSecondsToRun; i >= 1; i--)
         {            
-            Console.Write($"{countDownMessage} {i}"");
+            Console.Write($"{countDownMessage} {i}");
             Console.SetCursorPosition(0, Console.CursorTop);
             Thread.Sleep(1000);
         }

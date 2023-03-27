@@ -2,9 +2,9 @@ using System;
 
 public class BreathingActivity : Activity{
 
-    public BreathingActivity(string description,string activityname){
-        _description = description;
-        _activityname = activityname;
+    public BreathingActivity(){
+        _description = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
+        _activityname = "Breathing Activity";
     }
 
     public void Breathing(){
