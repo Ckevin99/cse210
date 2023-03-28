@@ -16,7 +16,7 @@ public class Activity{
 
 
     public void TimeSession(){
-        Console.WriteLine("How Long in seconds, would you like for this session?");
+        Console.WriteLine("\nHow Long in seconds, would you like for this session?");
         _duration = int.Parse(Console.ReadLine());
         Console.WriteLine("");
 
@@ -67,9 +67,8 @@ public class Activity{
             Thread.Sleep(1000);
         }
 
-        
-
     }
+    
 
 
 

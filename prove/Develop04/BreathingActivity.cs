@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 
 public class BreathingActivity : Activity{
 
@@ -12,14 +13,14 @@ public class BreathingActivity : Activity{
         Console.WriteLine("Get Ready...");
         WaitAnimation(4);
         Console.Clear();
-        int runtimes = _duration/10; 
-        int times = 0;
-        do{
-        times++;
-        CountDown(4,"Breathe in...");
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.Start();
+        while(stopwatch.ElapsedMilliseconds<_duration*1000){
+       CountDown(4,"Breathe in...");
         CountDown(6,"Now Breathe out...");
-        }while(runtimes>times);
+        }
         DisplayEndMessage();
+        
 
     }
 

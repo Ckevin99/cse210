@@ -30,6 +30,10 @@ class Program
             reflectionactivity.Reflection();
         break;
         case "3":
+        ListingActivity listingactivity = new ListingActivity();
+        listingactivity.DisplayStartMessage();
+        listingactivity.TimeSession();
+        listingactivity.Listing();
 
         break;
 
