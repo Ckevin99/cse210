@@ -1,41 +1,38 @@
 using System;
 using System.Diagnostics;
 
-public class Activity{
+public class Activity
+{
 
     protected int _duration;
     protected string _description;
-    protected string _activityname;
+    protected string _activityName;
 
-
-
-    
-
-
-
-
-
-    public void TimeSession(){
-        Console.WriteLine("\nHow Long in seconds, would you like for this session?");
+    public void TimeSession()
+    {
+        Console.Write("\nHow Long in seconds, would you like for this session?");
         _duration = int.Parse(Console.ReadLine());
         Console.WriteLine("");
-
     }
 
-    public void DisplayStartMessage(){
-        Console.WriteLine($"Welcome to {_activityname}\n");
-        Console.WriteLine($"Place the description {_description}");
-
-    }
-    public void DisplayEndMessage(){
+    public void DisplayStartMessage()
+    {
         Console.Clear();
+        Console.WriteLine($"Welcome to {_activityName}.\n");
+        Console.WriteLine($"{_description}");
+    }
+
+    public void DisplayEndMessage()
+    {
         Console.WriteLine("Well Done!");
         WaitAnimation(5);
-
-        Console.WriteLine($"You have completed another {_duration} seconds of the {_activityname}.\n");
-        
+        Console.WriteLine($"You have completed another {_duration} seconds of the {_activityName}.");
+        WaitAnimation(5);
+        Console.Clear();   
     }
-    public void WaitAnimation(int numSecondsToRun){
+
+    protected void WaitAnimation(int numSecondsToRun)
+    {
         int spinnerCounter= 0;        
 
         Stopwatch stopwatch = new Stopwatch();
@@ -58,37 +55,13 @@ public class Activity{
         Console.Write(" ");
 
     }
-    public void CountDown(int numSecondsToRun, string countDownMessage){
-
+    protected void CountDown(int numSecondsToRun, string countDownMessage)
+    {
         for (int i = numSecondsToRun; i >= 1; i--)
         {            
             Console.Write($"{countDownMessage} {i}");
             Console.SetCursorPosition(0, Console.CursorTop);
             Thread.Sleep(1000);
         }
-
     }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
