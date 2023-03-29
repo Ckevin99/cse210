@@ -1,4 +1,4 @@
-//Exceeds Requeriments
+//Exceeds Requirements
 // Reflection Activity will only display repeated prompts if all prompts were used.
 
 
