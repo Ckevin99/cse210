@@ -1,41 +1,32 @@
 using System;
 
 
+class Program{
 
-public class HelloWorld{
+static void Main(string[] args){
 
-static void DisplayWelcome(){
-    Console.WriteLine("Welcome to the Program!");
+    Square square = new Square("blue",3);
     
+
+    Circle circle = new Circle(3,"red");
+
+
+    Rectangle rectangle = new Rectangle(3,5,"yellow");
+
+
+    List<Shape> shapes = new List<Shape>();
+    shapes.Add(square);
+    shapes.Add(circle);
+    shapes.Add(rectangle);
+
+    foreach (Shape x in shapes){
+        Console.WriteLine(x.GetArea());
+        x.GetColor();
+        
+    }
+
+
+
+
 }
-
-static string PromptUserName(){
-    Console.WriteLine("What is your name?");
-    return Console.ReadLine();
-}
-
-static int PromptUserNumber() {
-    Console.WriteLine("What is your favorite Number?");
-    return int.Parse(Console.ReadLine());
-}
-static int SquareNumber( int a){
-    return a*a;
-}
-static void DisplayResult(string name, int number){
-    Console.WriteLine($"Your name is {name}");
-    Console.WriteLine($"Your name is {number}");
-}
-
-
-    
-public static void Main(string[] args) {
-    
-DisplayWelcome();
-string name = PromptUserName();
-int favnum = PromptUserNumber();
-int squarenum = SquareNumber(3);
-DisplayResult(name, favnum);
-    
-    
-    
 }
