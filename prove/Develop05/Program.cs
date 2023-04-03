@@ -19,6 +19,7 @@ class Program
         string fileName;
         int userInput2;
         int currentPoints = 0;
+        int oldPoints = 0;
 
          MyGoals mygoals = new MyGoals();
          SaveLoad saveload = new SaveLoad();
@@ -121,13 +122,17 @@ class Program
                     break;
 
                 case "5":
+                    oldPoints = currentPoints;
                     Console.Write("What goal do you want to record?");
                     userInput2 = int.Parse(Console.ReadLine());
                     currentgoals = mygoals.GetGoalList();
-                    if (!currentgoals[userInput2-1].IsComplete()){
-                        Console.WriteLine($"You got {currentgoals[userInput2-1].GetGoalPoints()}! ");
+                    if (!currentgoals[userInput2-1].IsComplete()){  
+                        currentPoints += currentgoals[userInput2-1].RecordEvent();
+                        Console.WriteLine($"You got {currentPoints-oldPoints}! ");
+                    }else{
+                        Console.WriteLine("This goal is already completed");
                     }
-                    currentPoints += currentgoals[userInput2-1].RecordEvent();
+                    
                     
                     
           

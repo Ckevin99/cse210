@@ -50,7 +50,7 @@ class CheckListGoal : Goal
 
       return totalPoints;
     }
-    Console.WriteLine("This goal is already completed");
+    
      
     return 0;
   }

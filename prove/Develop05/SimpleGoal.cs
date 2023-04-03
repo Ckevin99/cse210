@@ -34,8 +34,6 @@ class SimpleGoal : Goal{
           _isComplete = true;
           return _points;
         }
-
-        Console.WriteLine("This goal is already completed");
         return 0;
     }
     public override int GoalKind()
