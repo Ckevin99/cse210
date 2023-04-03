@@ -1,6 +1,6 @@
 // Exceeds requirements.
 // I created a system to redeem rewards using points.
-// I maked the code don't give points for assignments that already are completed.
+// I made the code doesn't give points for assignments that already are completed.
 
 
 
