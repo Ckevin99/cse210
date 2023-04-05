@@ -21,7 +21,7 @@ class Address
 
 
     public bool IsInUSA(){
-        if (_country.ToUpper() == "USA"||_country.ToUpper() == "United States"){
+        if (_country.ToUpper() == "USA"|| _country.ToUpper() == "UNITED STATES"){
 
             return true;
         }
@@ -34,7 +34,7 @@ class Address
 
 
     public string FullAddress(){
-        string fullAdress = $"Street Address : {_streetAddress}\nCity : {_city}\nState : {_state}Country : {_country}";
+        string fullAdress = $"Street Address : {_streetAddress}\nCity : {_city}\nState : {_state}\nCountry : {_country}";
 
         return fullAdress;
     }

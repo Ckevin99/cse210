@@ -34,7 +34,7 @@ class Order {
 
     public string LabelPacket(){
 
-        string labelPacket= "";
+        string labelPacket= "-------Products-------\n";
 
         foreach(Product x in _products){
         
@@ -54,7 +54,7 @@ class Order {
 
     public string ShippingLabel(){
 
-      return _customer.GetName() + _customer.GetAddress();
+      return _customer.GetName() +"\n" + _customer.GetAddress();
 
     }
 

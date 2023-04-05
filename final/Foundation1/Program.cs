@@ -24,11 +24,11 @@ class Program
         Comment comment6 = new Comment("Helton","Thank you, paulo!");
         comments2.Add(comment6);
         List<Comment> comments3 = new List<Comment>();
-        Comment comment7 = new Comment("Keilla","Nice video!");
+        Comment comment7 = new Comment("maria","I am starting this language");
         comments3.Add(comment7);
-        Comment comment8 = new Comment("Keilla","Nice video!");
+        Comment comment8 = new Comment("Kelle","Python is a nice programming language");
         comments3.Add(comment8);
-        Comment comment9 = new Comment("Keilla","Nice video!");
+        Comment comment9 = new Comment("Pedro","Great Video! Congrats!");
         comments3.Add(comment9);
 
         List<Video> videosList = new List<Video>();
