@@ -42,7 +42,7 @@ class Program
         
 
         foreach (Video video in videosList ){
-            Console.WriteLine($"Video name : {video._title}\nAuthor : {video._author}\nComments : {video.CommentsNumber()}");
+            Console.WriteLine($"Video name : {video._title}\nLength: {video._length} seconds\nAuthor: {video._author}\nComments : {video.CommentsNumber()}");
             
             foreach (Comment comment in video._comments){
                 Console.WriteLine($"{comment._personName}: {comment._commentText}");
