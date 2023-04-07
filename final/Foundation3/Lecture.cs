@@ -26,7 +26,7 @@ class Lecture : Event{
     public string FullMessage(){
 
 
-        return $"{_eventKind}{_title}\n{_speaker}\n{_capacity}{_description}\n{_date}\n{_address.GetAddress()}";
+        return $"{_eventKind}\n{_title}\nSpeaker: {_speaker}\nCapacity: {_capacity}\n{_description}\ndate: {_date}\n{_address.GetAddress()}";
     }
 
    

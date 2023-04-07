@@ -21,7 +21,7 @@ class Receptions : Event{
    
     public string FullMessage(){
 
-    return $"{_eventKind}\n{_title}\n{_email}\n{_description}\n{_date}\n{_address.GetAddress()}";
+    return $"{_eventKind}\n{_title}\n{_email}\n{_description}\ndate: {_date}\n{_address.GetAddress()}";
 
     }
 

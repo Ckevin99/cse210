@@ -22,7 +22,7 @@ class Outdoor : Event{
     
     public string FullMessage(){
 
-    return $"{_eventKind}{_title}\n{_weather}\n{_description}\n{_date}\n{_address.GetAddress()}";
+    return $"{_eventKind}\n{_title}\n{_weather}\n{_description}\ndate: {_date}\n{_address.GetAddress()}";
 
 
     }
